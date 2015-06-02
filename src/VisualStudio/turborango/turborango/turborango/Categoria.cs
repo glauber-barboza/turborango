@@ -1,7 +1,7 @@
 ﻿
 namespace TurboRango
 {
-    internal enum Categoria
+    public enum Categoria
     {
         Comun,
         CozinhaNatural,

@@ -1,13 +1,13 @@
 ﻿
 namespace TurboRango
 {
-    internal class Restaurante
+    public class Restaurante
     {
-        internal string Nome { get; set; }
-        internal int Capacidade { get; set; }
-        internal Categoria categoria { get; set; }
-        internal Contato Contato { get; set;}
-        internal Localizacao localizacao { get; set; };
+        public string Nome { get; set; }
+        public int? Capacidade { get; set; }
+        public Categoria categoria { get; set; }
+        public Contato Contato { get; set;}
+        public Localizacao localizacao { get; set; }
 
     }
 }

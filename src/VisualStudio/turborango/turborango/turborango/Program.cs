@@ -5,6 +5,7 @@ namespace TurboRango.Dominio
     {
         static void Main(string[] args)
         {
+
         }
     }
 }
