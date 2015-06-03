@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Text;
 using TurboRango.Dominio;
 
@@ -44,7 +45,7 @@ namespace TurboRango.ImportadorXML
             Console.WriteLine(pedreiro);
 
             #endregion
-
+        #region loco 
             const string nomeArquivo = "restaurantes.xml";
 
             var restaurantesXML = new RestaurantesXML(nomeArquivo);
@@ -60,6 +61,24 @@ namespace TurboRango.ImportadorXML
             var ex1f = restaurantesXML.ApenasMaisPopulares();
             var ex1g = restaurantesXML.BairrosComMenosPizzarias();
             var ex1h = restaurantesXML.AgrupadosPorBairroPercentual();
-         }
+           #endregion
+
+            #region connectbanco
+            var connString = @"Data Source=.; Initial Catalog=TurboRango_dev; UID=sa;PWD=feevale";
+
+            var acessoAoBanco = new CarinhaQueManipulaOBanco(connString);
+
+          
+            acessoAoBanco.Inserir(new Contato
+            {
+                Site = "www.dogao.com",
+                Telefone = "55999999"
+            });
+
+            IEnumerable<Contato> contatos = acessoAoBanco.getContatos();
+            
+            #endregion
+
+        }
     }
 }
