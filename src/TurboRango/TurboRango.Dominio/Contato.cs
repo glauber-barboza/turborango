@@ -5,7 +5,5 @@
         public string Site { get; set; }
 
         public string Telefone { get; set; }
-
-      
     }
 }

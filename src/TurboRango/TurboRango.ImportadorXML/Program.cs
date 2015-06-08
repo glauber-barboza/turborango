@@ -45,7 +45,9 @@ namespace TurboRango.ImportadorXML
             Console.WriteLine(pedreiro);
 
             #endregion
-            #region loco 
+
+            #region LINQ to XML
+
             const string nomeArquivo = "restaurantes.xml";
 
             var restaurantesXML = new RestaurantesXML(nomeArquivo);
@@ -61,28 +63,28 @@ namespace TurboRango.ImportadorXML
             var ex1f = restaurantesXML.ApenasMaisPopulares();
             var ex1g = restaurantesXML.BairrosComMenosPizzarias();
             var ex1h = restaurantesXML.AgrupadosPorBairroPercentual();
-           #endregion
-            #region connectbanco
-            var connString = @"Data Source=.; Initial Catalog=TurboRango_dev; UID=sa;PWD=feevale";
+
+            var todos = restaurantesXML.TodosRestaurantes();
+
+            #endregion
+
+            #region ADO.NET
+
+            var connString = @"Data Source=.;Initial Catalog=TurboRango_dev;Integrated Security=True;";
 
             var acessoAoBanco = new CarinhaQueManipulaOBanco(connString);
 
-          
             acessoAoBanco.Inserir(new Contato
             {
-                Site = "www.dogao.com",
-                Telefone = "55999999"
+                 Site = "www.dogao.gif",
+                 Telefone = "5555555"
             });
 
             IEnumerable<Contato> contatos = acessoAoBanco.GetContatos();
-            
-            #endregion
-            #region InserirRestaurante
 
-            var connectionString = @"Data Source=.\server;Initial Catalog=TurboRango_dev;Integrated Security=True;";
-            var restauranteTiririca = new Restaurantes(connectionString);
+            var restaurantes = new Restaurantes(connString);
 
-            restauranteTiririca.Inserir(new Restaurante
+            restaurantes.Inserir(new Restaurante
             {
                 Nome = "Tiririca",
                 Capacidade = 50,
@@ -101,10 +103,12 @@ namespace TurboRango.ImportadorXML
                 }
             });
 
+            foreach (var r in todos)
+            {
+                restaurantes.Inserir(r);
+            }
+
             #endregion
         }
-
-       
-
     }
 }
