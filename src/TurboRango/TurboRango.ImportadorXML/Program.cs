@@ -70,8 +70,8 @@ namespace TurboRango.ImportadorXML
 
             #region ADO.NET
 
-            var connString = @"Data Source=.;Initial Catalog=TurboRango_dev;Integrated Security=True;";
-
+          //  var connString = @"Data Source=.;Initial Catalog=TurboRango_dev;Integrated Security=True;";
+            var connString = @"Data Source=.; Initial Catalog=TurboRango_dev; UID=sa;PWD=feevale";
             var acessoAoBanco = new CarinhaQueManipulaOBanco(connString);
 
             acessoAoBanco.Inserir(new Contato
