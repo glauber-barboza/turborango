@@ -45,7 +45,7 @@ namespace TurboRango.ImportadorXML
             Console.WriteLine(pedreiro);
 
             #endregion
-        #region loco 
+            #region loco 
             const string nomeArquivo = "restaurantes.xml";
 
             var restaurantesXML = new RestaurantesXML(nomeArquivo);
@@ -62,7 +62,6 @@ namespace TurboRango.ImportadorXML
             var ex1g = restaurantesXML.BairrosComMenosPizzarias();
             var ex1h = restaurantesXML.AgrupadosPorBairroPercentual();
            #endregion
-
             #region connectbanco
             var connString = @"Data Source=.; Initial Catalog=TurboRango_dev; UID=sa;PWD=feevale";
 
@@ -75,10 +74,37 @@ namespace TurboRango.ImportadorXML
                 Telefone = "55999999"
             });
 
-            IEnumerable<Contato> contatos = acessoAoBanco.getContatos();
+            IEnumerable<Contato> contatos = acessoAoBanco.GetContatos();
             
             #endregion
+            #region InserirRestaurante
 
+            var connectionString = @"Data Source=.\server;Initial Catalog=TurboRango_dev;Integrated Security=True;";
+            var restauranteTiririca = new Restaurantes(connectionString);
+
+            restauranteTiririca.Inserir(new Restaurante
+            {
+                Nome = "Tiririca",
+                Capacidade = 50,
+                Categoria = Categoria.Fastfood,
+                Contato = new Contato
+                {
+                    Site = "http://github.com/tiririca",
+                    Telefone = "5555 5555"
+                },
+                Localizacao = new Localizacao
+                {
+                    Bairro = "Vila Nova",
+                    Logradouro = "ERS 239, 2755",
+                    Latitude = -29.6646122,
+                    Longitude = -51.1188255
+                }
+            });
+
+            #endregion
         }
+
+       
+
     }
 }
