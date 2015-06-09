@@ -26,6 +26,12 @@ namespace TurboRango.Web
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+
+#if Debug
+    BundleTable.EnableOptimizations = false;
+#else
+    BundleTable.EnableOptimizations = true;
+#endif
         }
     }
 }
