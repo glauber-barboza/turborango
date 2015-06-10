@@ -22,6 +22,7 @@ namespace TurboRango.Web.Models
     {
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
+
         {
         }
 
