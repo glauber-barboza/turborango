@@ -11,6 +11,7 @@ namespace TurboRango.Web.Controllers
         // GET: Sorteios
         public ActionResult Index()
         {
+            ViewBag.QtdRestaurantes = 33;
             return View();
         }
     }
