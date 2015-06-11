@@ -174,10 +174,15 @@
     <Compile Include="Migrations\201506082001229_CRIARENTIDADES.Designer.cs">
       <DependentUpon>201506082001229_CRIARENTIDADES.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201506111722517_Atualizar.cs" />
+    <Compile Include="Migrations\201506111722517_Atualizar.Designer.cs">
+      <DependentUpon>201506111722517_Atualizar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="ProdutosController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -244,6 +249,12 @@
     <Content Include="Views\Restaurantes\Edit.cshtml" />
     <Content Include="Views\Restaurantes\Index.cshtml" />
     <Content Include="Views\Sorteios\Index.cshtml" />
+    <Content Include="Views\Produtos\Create.cshtml" />
+    <Content Include="Views\Produtos\Delete.cshtml" />
+    <Content Include="Views\Produtos\Details.cshtml" />
+    <Content Include="Views\Produtos\Edit.cshtml" />
+    <Content Include="Views\Produtos\Index.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\Produtos.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -267,6 +278,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201506082001229_CRIARENTIDADES.resx">
       <DependentUpon>201506082001229_CRIARENTIDADES.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201506111722517_Atualizar.resx">
+      <DependentUpon>201506111722517_Atualizar.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

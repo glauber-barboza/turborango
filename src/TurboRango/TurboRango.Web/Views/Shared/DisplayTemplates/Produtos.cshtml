@@ -1,0 +1,24 @@
+﻿@model TurboRango.Dominio.Produtos
+
+@{
+    ViewBag.Title = "Produtos";
+}
+
+<h2>Prato mais vendido</h2>
+<div class="col-xs-4">
+    <dl class="dl-horizontal">
+        <img src=@Html.DisplayFor(modelItem => modelItem.imgPrato) width="298px" height="300px" class="left">
+        <h4>
+            Nome: @Html.DisplayFor(modelItem => modelItem.nome)
+        </h4>
+
+        <h6>
+            Preço: @Html.DisplayFor(modelItem => modelItem.preco)
+        </h6>
+
+        <h6>
+            Descrição: @Html.DisplayFor(modelItem => modelItem.descricao)
+        </h6>
+
+    </dl>
+</div>
