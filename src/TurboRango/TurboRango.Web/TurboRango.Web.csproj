@@ -180,10 +180,6 @@
     <Compile Include="Migrations\201506111722517_Atualizar.Designer.cs">
       <DependentUpon>201506111722517_Atualizar.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201506120411534_teste.cs" />
-    <Compile Include="Migrations\201506120411534_teste.Designer.cs">
-      <DependentUpon>201506120411534_teste.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -292,9 +288,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201506111722517_Atualizar.resx">
       <DependentUpon>201506111722517_Atualizar.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201506120411534_teste.resx">
-      <DependentUpon>201506120411534_teste.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
