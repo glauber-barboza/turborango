@@ -6,12 +6,15 @@
 <div class="jumbotron">
     <h1>Turbo rango na veia</h1>
     <p class="lead">O melhores restaurantes da cidade!.</p>
-    <p><a href="/Restaurantes" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+    <p>
+        <h4>Com duvida de onde vai comer? sorteie um restaurante</h4>
+    </p>
+    <p>@Html.ActionLink("Começar »", "Index", "Sorteios", null, new { @class = "btn btn-primary btn-lg" })</p>
+
 </div>
         <p>
             <h4>Restaurantes</h4>
         </p>
-
 @foreach (var item in Model)
 {
         <div class="col-xs-3">
@@ -31,12 +34,12 @@
                         </h6>
 
                         <h6>
-                            E-mail: @Html.DisplayFor(modelItem => item.Contato.Site)
+                            Telefone: @Html.DisplayFor(modelItem => item.Contato.Telefone)
                         </h6>
-
+                        
                         <h6>
-                            Telefone: @Html.DisplayFor(modelItem => item.Contato.Site)
-                        </h6>
+                            Site: @Html.DisplayFor(modelItem => item.Contato.Site)
+                         </h6>
 
                         <h6>
                             Localização: @Html.DisplayFor(modelItem => item.Localizacao.Logradouro)

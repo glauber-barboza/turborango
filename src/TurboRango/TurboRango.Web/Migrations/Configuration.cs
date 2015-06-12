@@ -37,7 +37,7 @@ namespace TurboRango.Web.Migrations
                     Categoria = Categoria.Comum,
                     Localizacao = new Localizacao
                     {
-                        Logradouro = "Rua Sete de Setembro, 1045 - Liberdade",
+                        Logradouro = "Rua Sete de Setembro, 1045",
                         Bairro = "Liberdade",
                         Latitude = -29.712571,
                         Longitude = -51.13636
